@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+}
+.billboard{
+    background-color: #1998ed;
+    margin: 0;
+}
+.list {
+    height: 200px;
+    position: relative;
+    list-style-type:none;
+    padding-left:0;
+    margin: 0;
+    margin-left: 280px;
+    &.stacked{
+        .card{
+            //position: absolute!important;    
+        }
+    }
+    &.spreaded{
+        .card{
+            //position: relative;
+        }
+    }
+}
+
+.container{
+    width: 970px;
+    margin: 0 auto;
+    position: relative;
+    height: 200px;
+}
+
+.question{
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.card {
+  
+    transition: all 1s cubic-bezier(0.68,-.55,.265,1.55);
+
+    perspective: 1000;
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+
+    float: left;
+    position: absolute;
+    width: 145px;
+    height: 170px;
+    background-color:#eee;
+
+    left: 0;
+    bottom: 0;
+    margin: 30px 0 15px 15px;
+  
+    &.ani0 {
+      left: 0px;
+      bottom: 0px;
+    }
+
+    &.ani1 {
+      left: 170px;
+      bottom: 0px;
+    }
+
+    &.ani2 {
+      left: 340px;
+      bottom: 0px;
+    }
+
+    &.ani3 {
+        left: 510px;
+        bottom: 0px;
+    }
+
+    &.opened{
+        -moz-transform: scaleX(-1); 
+        -o-transform: scaleX(-1); 
+        -webkit-transform: scaleX(-1); 
+        transform: scaleX(-1); 
+        filter: FlipH; 
+        -ms-filter: "FlipH"; 
+        -webkit-transition: all 1s;
+            &.red{
+                background-color: red;
+            }
+
+            &.yellow{
+                background-color: yellow;
+            }
+
+            &.green{
+                background-color: green;
+            }
+
+            &.blue{
+                background-color: blue;
+            }
+    }
+  
+}
